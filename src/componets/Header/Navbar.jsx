@@ -169,7 +169,7 @@ function Navbar(props) {
                         alt="NETFLIX"
                       />
                     </Link>
-                    <ul class="absolute hidden text-white pt-1 -ml-32 group-hover:block transition ease-in-out delay-150">
+                    <ul className="absolute hidden text-white pt-1 -ml-32 group-hover:block transition ease-in-out delay-150">
                       <li>
                         <Link
                           to={"/profile"}
