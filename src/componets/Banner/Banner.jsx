@@ -16,14 +16,13 @@ function Banner(props) {
   const [urlId, setUrlId] = useState("");
 
   function getWindowSize() {
-    const {innerWidth:width } = window;
+    const { innerWidth: width } = window;
     return {
-      width
-    }
+      width,
+    };
   }
 
-  const [windowSeize, setWindowSeize] = useState(getWindowSize())
-
+  const [windowSeize, setWindowSeize] = useState(getWindowSize());
 
   useEffect(() => {
     axios.get(props.url).then((response) => {
@@ -35,11 +34,10 @@ function Banner(props) {
     });
 
     function handleWindowResize() {
-      setWindowSeize(getWindowSize())
+      setWindowSeize(getWindowSize());
     }
 
-    window.addEventListener('resize', handleWindowResize)
-
+    window.addEventListener("resize", handleWindowResize);
   }, []);
 
   const handleMoviePopup = (movieInfo) => {
@@ -63,9 +61,7 @@ function Banner(props) {
       <div
         style={{
           backgroundImage: `linear-gradient(90deg, hsl(0deg 0% 7% / 91%) 0%, hsl(0deg 0% 0% / 0%) 35%, hsl(220deg 26% 44% / 0%) 100%), url(${
-            movie
-              ? imageUrl + movie.backdrop_path
-              : ""
+            movie ? imageUrl + movie.backdrop_path : ""
           })`,
         }}
         className="h-[50rem] md:h-[55rem] 3xl:h-[63rem] bg-cover bg-center object-contain grid items-center"
@@ -83,8 +79,7 @@ function Banner(props) {
                 <div className="animate-pulse w-72 ml-4 sm:ml-0 sm:w-96 py-5 mb-7 xl:py-7 xl:w-45rem bg-neutral-900 rounded-md"></div>
               </div>
             )}
-            
-            
+
             <div className="flex">
               <div className=" hidden sm:flex justify-center sm:justify-start ml-2">
                 {movie.vote_average ? (
