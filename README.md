@@ -6,8 +6,7 @@ This project is a Netflix clone built using React.js, designed to enhance skills
 
 
 
-### mobile experience 
-![mobile screens](https://i.imgur.com/ForTeQi.jpg)
+
  
 ## Key Functionalities
 - Sign In / Sign Up
