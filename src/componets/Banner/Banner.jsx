@@ -32,7 +32,6 @@ function Banner(props) {
           return 0.5 - Math.random();
         })[0]
       );
-      console.log(movie);
     });
 
     function handleWindowResize() {
